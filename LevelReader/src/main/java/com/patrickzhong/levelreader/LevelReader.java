@@ -34,11 +34,13 @@ public class LevelReader extends JavaPlugin{
 			try {
 				br = new BufferedReader(new FileReader(path));
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
 				getLogger().info("FILE NOT FOUND");
 				getLogger().info("FILE NOT FOUND");
 				getLogger().info("FILE NOT FOUND");
 				getLogger().info("FILE NOT FOUND");
+				getLogger().info(e.getMessage());
+				getLogger().info(e.getCause().toString());
+				
 				getLogger().info("FILE NOT FOUND");
 				getLogger().info("FILE NOT FOUND");
 				getLogger().info("FILE NOT FOUND");
