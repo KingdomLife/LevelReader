@@ -1,0 +1,9 @@
+name: LevelReader
+main: com.patrickzhong.levelreader.LevelReader
+version: 1
+
+commands:
+  lv:
+    description: Get level of player.
+    usage: /<command> [player]
+    permission: levelreader.lv
