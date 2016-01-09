@@ -16,7 +16,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LevelReader extends JavaPlugin{
-	String path = (new File("")).getAbsolutePath()+"/Skript/variables.csv";
+	String path = (new File("")).getAbsolutePath()+"/plugins/Skript/variables.csv";
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		
