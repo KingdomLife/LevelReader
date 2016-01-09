@@ -1,6 +1,7 @@
 package com.patrickzhong.levelreader;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,7 +16,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LevelReader extends JavaPlugin{
-	String path = "/Skript/variables.csv";
+	String path = (new File("")).getAbsolutePath()+"/Skript/variables.csv";
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		
