@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LevelReader extends JavaPlugin{
-	String path = "../Skript/variables.csv";
+	String path = "/Skript/variables.csv";
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		
@@ -47,7 +47,11 @@ public class LevelReader extends JavaPlugin{
 			try {
 				while ((line = br.readLine()) != null) {
 				    String[] arr = line.split(",");
-				    ((Player)sender).sendMessage(arr[2]);
+				    if(arr[0].equals("level."+target)){
+				    	((Player)sender).sendMessage(arr[2]);
+				    	br.close();
+				    	return true;
+				    }
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
